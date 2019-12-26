@@ -4,11 +4,25 @@
 
 ### 1. Number
 
+### Number
+
+Create my ```Number```.
+```js
+function MyNumber (value) {
+  if (this instanceof MyNumber) {
+    var number = {}
+  } else {
+    return +value
+  }
+}
+MyNumber
+```
+
 #### Number.isNaN
 
 How to implement my ```Number.isNaN``` function ? As we all know that ```NaN === NaN``` would got ```false```, cause there is nothing equal to ```NaN```, and then how we implement ```Number.isNaN```.
 
-1. String ?
+First: ```String``` ?
 ``` js
 function isNaN (value) {
   return Object.prototype.toString.call(value) === '[object Number]' && value.toString() === "NaN"
@@ -35,7 +49,7 @@ function isNaN (value) {
 
 Number.myIsNaN = isNaN
 ```
-Test Again:
+Try Again:
 ``` js
 Number.myIsNaN(NaN) // -> true
 Number.myIsNaN(1) // -> false
@@ -49,6 +63,7 @@ Number.myIsNaN(number) // -> false
 ```
 Okay, Good !
 
+#### Number.isNaN
 
 ### Function
 
