@@ -67,6 +67,31 @@ Okay, Good !
 
 ### Function
 
+``` js
+function MyFunction () {
+
+}
+
+const getGlobal = (function() {
+  const _this = this
+  return () => _this_
+})()
+
+MyFunction.prototype.call = function (context, ...args) {
+  if (context === null || context === undefined) {
+    context = getGlobal()
+  } else if (typeof context !== 'object' && typeof context !== 'function') {
+    context = MyObject(context)
+  }
+  
+  const _thisKey = Symbol('this key')
+  context[_thisKey] = this
+  const result = context[_thisKey](...args)
+  delete context[_thisKey]
+  return result
+}
+```
+
 ### Object
 
 1. My ```Object```, first ```Object``` is a function, and it will got one param to return a object value.
