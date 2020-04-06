@@ -26,7 +26,7 @@ MyNumber.myIsNaN = isNaN
 ```
 Oh, Good.
 Test:
-``` javascript
+``` js
 MyNumber.myIsNaN(NaN) // -> true
 MyNumber.myIsNaN(1) // -> false
 

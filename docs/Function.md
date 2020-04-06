@@ -1,7 +1,7 @@
 
 # My Function
 
-``` JavaScript
+``` js
 function MyFunction () {
 
 }

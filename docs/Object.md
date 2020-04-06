@@ -3,7 +3,7 @@
 
 1. My ```Object```, at first ```Object``` is a function, and it will got one param to return a object value.
 
-``` JavaScript
+``` js
 function MyObject (value) {
   const type = typeof value
   if (value === null) {
@@ -26,7 +26,7 @@ function MyObject (value) {
 
 ```
 But when we use ```MyObject()``` function, there is a ```Object``` instance would got instead of ```MyObject``` instance, could we changed it ? Let's do some try.
-``` JavaScript
+``` js
 function MyObject (value) {
   if (this instanceof MyObject) {
     console.log('use new')
